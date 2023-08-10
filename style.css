@@ -17,7 +17,6 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-
 }
 
 .top {
@@ -28,12 +27,19 @@ body {
 }
 
 .arrow {
-    height: 150px;
+    height: 100px;
     cursor: pointer;
 }
 
 .right {
-    transform: rotate(180deg)
+    transform: rotate(180deg);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.left {
+    background-color: white;
+    border-radius: 50%;
 }
 
 .frame {
