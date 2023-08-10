@@ -6,13 +6,23 @@ const images = document.querySelectorAll('.image')
 
 let sliderNumber = 1;
 
+let length = images.length;
+
+const nextSlide = () => {
+    slider.style.transform = `translateX(-${sliderNumber * 700}px)`
+    sliderNumber ++;
+}
+
+const prevSlide = () => {
+    slider.style.transform = `translateX(0px)`
+    sliderNumber = 1;
+}
+
 right.addEventListener('click', () => {
-    if (sliderNumber < images.length) {
-        slider.style.transform = `translateX(-${sliderNumber * 700}px)`
-        sliderNumber ++;
+    if (sliderNumber < length) {
+        nextSlide();
     } else {
-        slider.style.transform = `translateX(0px)`
-        sliderNumber = 1;
+        prevSlide();
     }
 }); 
 
