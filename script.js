@@ -19,11 +19,7 @@ const prevSlide = () => {
 }
 
 right.addEventListener('click', () => {
-    if (sliderNumber < length) {
-        nextSlide();
-    } else {
-        prevSlide();
-    }
+    sliderNumber < length ? nextSlide() : prevSlide();
 }); 
 
 // 700
