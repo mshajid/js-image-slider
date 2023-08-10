@@ -3,7 +3,7 @@ const right = document.querySelector('.right');
 const slider = document.querySelector('.slider');
 const images = document.querySelectorAll('.image')
 const bottom = document.querySelector('.bottom');
-
+const bodyBg = document.querySelector('body');
 
 let sliderNumber = 1;
 
@@ -21,12 +21,14 @@ buttons[0].style.backgroundColor = 'white';
 const resetBg = () => {
     buttons.forEach((button) => {
         button.style.backgroundColor = 'transparent'
+        // document.body.style.background = '#fab1a0' // to change the BG color
     })
 }
 
 buttons.forEach((button, i) => {
     button.addEventListener('click', ()=> {
         resetBg();
+        dynamicBg();
         slider.style.transform = `translateX(-${i * 700}px)`;
         // slideNumber = i + 1;
         button.style.backgroundColor = 'white';
