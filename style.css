@@ -43,6 +43,10 @@ body {
     border-radius: 10px;
 }
 
+.slider {
+    display: flex;
+    transition: all 1s ease;
+}
 
 .image {
     object-fit: cover;
